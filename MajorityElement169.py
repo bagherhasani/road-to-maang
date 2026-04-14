@@ -19,21 +19,48 @@ class Solution(object):
 
 
 
+
+class SolutionBaq(object):
+
+    def findMajorityElement(self,nums):
+       seen={}
+
+       for i in range(len(nums)):
+           if nums[i] in seen:
+               seen[nums[i]]+=1
+               if seen[nums[i]]>floor(len(nums)/2):
+                   return nums[i]
+
+           else:
+               seen[nums[i]]=1
+           
+
+       return max(seen,key=seen.get)
+
+
 if __name__=="__main__":
     print("hey")
+    sol = Solution()
+    solbaq=SolutionBaq()
 
 
-    nums=[2,2,1,1,1,2,2]
-    seen={}
-    n=len(nums)/2
+    nums=[1,2,2]
+    print(sol.majorityElement(nums))
 
-    for i in range(len(nums)):
-        if nums[i] in seen:
-            seen[nums[i]]+=1
-            if seen[nums[i]]>floor(n):
-                print(nums[i])
+    print(solbaq.findMajorityElement(nums))
 
 
-        else:
-            seen[nums[i]]=1
+
+    # seen={}
+    # treshhold = floor(len(nums)/2)
+
+    # for item in nums:
+    #      if item in seen:
+    #           seen[item]+=1
+    #           if seen[item]>treshhold:
+    #               print(item)
+
+    #      else:
+    #          seen[item]=1
+    # print(seen)
   
