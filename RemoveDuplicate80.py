@@ -59,7 +59,7 @@ if __name__=="__main__":
     solbaq=SolutionBaq()
 
 
-    nums = [1,1,1,1,1,1]
+    nums = [1,2,1,2,1,2]
 
     
     print(sol.removeDuplicates(nums))

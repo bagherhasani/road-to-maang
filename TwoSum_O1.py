@@ -5,7 +5,7 @@ if __name__ =="__main__":
     print("hell no")
 
 
-numbers=[5,6,2,1]
+numbers=[1,2,1,3]
 target=3
 
 seen={}
