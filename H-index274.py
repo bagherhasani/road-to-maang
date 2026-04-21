@@ -14,6 +14,17 @@ class Solution(object):
              
 
 
+    def hIndexR(self,citatiosn):
+         h=0
+         counter=0
+         citations.sort(reverse=True)
+
+         for i in range(len(citations)):
+              counter+=1
+              if citations[i]>=counter:
+                   h=counter
+         return h
+
 
 if __name__=="__main__":
 

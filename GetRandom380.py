@@ -112,3 +112,22 @@ if __name__=="__main__":
 
     print(rs.getRandom())
     
+
+
+
+    #solution: we have one array one hashmap for this question
+    """" 
+    inset(): we add items to hashmap but there is good trick - we know the hashmap key which is the number we insert
+    but we don't know the value of it should be from 0 to something that's we use the len(self.array) and then we add
+    the val to array this way the values of hashmap are 0 to something - trick here
+
+    remove(): we find the last element in the array - we swap it with the  item we want to remvoe -
+    we pop the last item which is the item we want to remove because pop=o(1)
+    1. find last element in array
+    2. move last element to target's index (swap in array + update hashmap)
+    3. pop last element (now the target)
+    4. delete target from hashmap
+    
+
+    getRandom: import random  and then random.choice(self.array)
+    """
